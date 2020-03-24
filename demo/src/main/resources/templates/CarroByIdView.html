@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro by ID View</title>
+</head>
+<body>
+    <table>
+        <tr th:each="carro:${carro}">
+            <td th:text="${carro?.id}" />
+            <td th:text="${carro?.placa}" />
+            <td th:text="${carro?.modelo}" />
+            <td th:text="${carro?.cor}" />
+            <td th:text="${carro?.ano}" />
+    </table>
+    <div th:unless="${carro}">
+        <h1 id="Name">Gustavo dos Santos Nogueira</h1>
+        <h2 id="Errp">ERRO - Carro inválido</h2>
+    </div>
+</body>
+</html>
